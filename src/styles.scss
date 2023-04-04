@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
+
+@include mat.core();
+
+@import 'theming/typography';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Lato, 'Avenir', sans-serif;
+  line-height: 1.5;
+}

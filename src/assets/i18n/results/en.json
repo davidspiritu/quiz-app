@@ -1,0 +1,25 @@
+{
+  "labels": {
+    "reviewQuiz": "Review Quiz",
+    "question": "Question",
+    "yourAnswer": "Your Answer",
+    "correctAnswer": "Correct Answer",
+    "results": "Results",
+    "score": "Score",
+    "rating": "Rating",
+    "RecommendedCourses": "Recommended Courses"
+  },
+  "rating": {
+    "fail": "Fail",
+    "low": "Low",
+    "average": "Average",
+    "high": "High"
+  },
+  "courses": {
+    "a2": "A2 Key for Schools",
+    "b1Preliminary": "B1 Preliminary for Schools",
+    "b2First": "B2 First",
+    "b2Schools": "B2 First for Schools",
+    "c1Advance": "C1 Advanced"
+  }
+}

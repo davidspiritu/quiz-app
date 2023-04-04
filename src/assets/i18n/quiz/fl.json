@@ -1,0 +1,10 @@
+{
+  "labels": {
+    "questionInfo": "Tanong {{selectedIndex}} sa {{length}}",
+    "back": "Bumalik",
+    "next": "Susunod",
+    "submit": "Ipasa",
+    "starNewQuiz": "Magsimula ng Bagong Pagsusulit",
+    "question": "Mga Tanong"
+  }
+}

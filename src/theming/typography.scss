@@ -1,0 +1,5 @@
+$quiz-typography: mat.define-typography-config(
+  $font-family: 'Lato, Avenir, sans-serif',
+);
+
+@include mat.core($quiz-typography);

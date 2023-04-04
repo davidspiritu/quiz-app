@@ -1,0 +1,10 @@
+{
+  "labels": {
+    "questionInfo": "Question {{selectedIndex}} out of {{length}}",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "starNewQuiz": "Start New Quiz",
+    "question": "Questions"
+  }
+}

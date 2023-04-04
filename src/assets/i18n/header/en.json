@@ -1,0 +1,12 @@
+{
+  "texts": {
+    "changeLanguage": "Change Language"
+  },
+  "labels": {
+    "title": "Quiz Game"
+  },
+  "icons": {
+    "title": "checklist_rtl",
+    "languageSelectIcon": "language"
+  }
+}
