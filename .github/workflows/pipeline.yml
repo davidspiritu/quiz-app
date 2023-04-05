@@ -5,7 +5,7 @@ on:
     branches: [main, dev]
 
 jobs:
-  Test:
+  quiz-app-pipeline:
     runs-on: ubuntu-latest
     permissions:
       contents: read
