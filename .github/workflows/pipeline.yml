@@ -15,10 +15,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          python-version: '3.8'
       - name: Install node packages
         run: npm ci --legacy-peer-deps
       - name: Lint
-        run: npx nx run quiz-app:lint
+        run: npx nx run quiz-app:lint --coverage
       - name: Test
         run: npx nx test

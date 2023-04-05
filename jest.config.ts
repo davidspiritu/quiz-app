@@ -10,15 +10,14 @@ export default {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  // collectCoverage: true,
-  // coverageThreshold: {
-  //   global: {
-  //     lines: 100,
-  //     statements: 100,
-  //     functions: 100,
-  //     branches: 100,
-  //   },
-  // },
+  coverageThreshold: {
+    global: {
+      lines: 50,
+      statements: 50,
+      functions: 50,
+      branches: 40,
+    },
+  },
   coverageReporters: ['text-summary'],
   coverageDirectory: './coverage/quiz-app',
   coveragePathIgnorePatterns: [
