@@ -4,6 +4,8 @@
 
 This project was generated using [Nx](https://nx.dev).
 
+- Nx
+- Node version v16.15.0
 - Angular 15
 - API Used: `https://the-trivia-api.com`
 
@@ -15,7 +17,7 @@ Run `npm ci --legacy-peer-deps`
 
 Install the following (latest):
 
-- [Node.js](https://nodejs.org/en/download) with NPM (v16.15.0)
+- [Node.js](https://nodejs.org/en/download)
 - [Visual Studio Code](https://code.visualstudio.com/download) as IDE
 - [NVM](https://github.com/nvm-sh/nvm) (optional), so we can easily switch to different versions of node
 - [Nx CLI](https://nx.dev/using-nx/nx-cli) via npm command, `npm i -g nx` (for better developer experience; no need to use npx command every time)
@@ -37,11 +39,11 @@ Install the following (latest):
 
 ## Development server
 
-Run `nx serve` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+Run `npx nx serve` or `nx serve` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
 ## Build
 
-Run `nx build` to build the project. The build artifacts will be stored in the `dist/` directory. It will automatically be a production build.
+Run `npx nx build` or `nx build` to build the project. The build artifacts will be stored in the `dist/` directory. It will automatically be a production build.
 
 ## Running unit tests
 
