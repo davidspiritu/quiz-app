@@ -3,16 +3,17 @@
 This project was generated using [Nx](https://nx.dev).
 
 - Angular 15
+- API Used: `https://the-trivia-api.com`
 
 ## Pre-requisites
 
 ### Install Dependencies
 
-  Run `npm ci --legacy-peer-deps`
+Run `npm ci --legacy-peer-deps`
 
 Install the following (latest):
 
-- [Node.js](https://nodejs.org/en/download) with NPM
+- [Node.js](https://nodejs.org/en/download) with NPM (v16.15.0)
 - [Visual Studio Code](https://code.visualstudio.com/download) as IDE
 - [NVM](https://github.com/nvm-sh/nvm) (optional), so we can easily switch to different versions of node
 - [Nx CLI](https://nx.dev/using-nx/nx-cli) via npm command, `npm i -g nx` (for better developer experience; no need to use npx command every time)
@@ -42,9 +43,9 @@ Run `nx build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `npm run test` to execute the unit tests via [Jest](https://jestjs.io).
+Run `npx nx run quiz-app:lint` run linter
 
-Run `npm run testcov` to execute the unit tests and generate a coverage report.
+Run `npx nx test` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## Further help
 
