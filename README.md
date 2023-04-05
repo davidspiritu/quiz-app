@@ -1,5 +1,7 @@
 # Quiz Application
 
+[![quiz-app](https://github.com/davidspiritu/quiz-app/actions/workflows/pipeline.yml/badge.svg)](https://github.com/davidspiritu/quiz-app/actions/workflows/pipeline.yml)
+
 This project was generated using [Nx](https://nx.dev).
 
 - Angular 15
