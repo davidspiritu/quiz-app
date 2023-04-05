@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  margin: 1rem;
+  ::ng-deep {
+    th {
+      white-space: normal;
+    }
+  }
+
+  table {
+    max-width: calc(100vw * 0.6);
+  }
+}

@@ -1,0 +1,32 @@
+<section
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  *transloco="let t"
+  data-testid="rating-crouse-table"
+>
+  <h2>{{ t('results.labels.results') }}</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">{{ t('results.labels.score') }}</th>
+        <th scope="col">{{ t('results.labels.rating') }}</th>
+        <th scope="col">{{ t('results.labels.RecommendedCourses') }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th data-testid="score">{{ score }} / {{ length }}</th>
+        <td data-testid="rating">{{ t('results.rating.' + rating) }}</td>
+        <td>
+          <ul>
+            <ng-container *ngFor="let course of courseRecomendation">
+              <li data-testid="course">
+                {{ t('results.courses.' + course) }}
+              </li>
+            </ng-container>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

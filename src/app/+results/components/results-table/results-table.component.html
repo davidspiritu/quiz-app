@@ -1,0 +1,32 @@
+<section
+  class="border"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  data-testid="results-table"
+  *transloco="let t"
+>
+  <h2>{{ t('results.labels.reviewQuiz') }}</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">{{ t('labels.#') }}</th>
+        <th scope="col">{{ t('results.labels.question') }}</th>
+        <th scope="col">{{ t('results.labels.yourAnswer') }}</th>
+        <th scope="col">{{ t('results.labels.correctAnswer') }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let result of results; let i = index">
+        <tr
+          data-testid="results-table-row"
+          [class.table-danger]="!result.correct"
+        >
+          <th scope="index" data-testid="index">{{ i + 1 }}</th>
+          <th data-testid="question">{{ result.question }}</th>
+          <td data-testid="answer">{{ result.answer }}</td>
+          <td data-testid="correctedAnswer">{{ result.correctedAnswer }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</section>
