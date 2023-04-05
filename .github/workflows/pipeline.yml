@@ -20,4 +20,4 @@ jobs:
       - name: Lint
         run: npx nx run quiz-app:lint
       - name: Test
-        run: npx nx test --coverage
+        run: npx nx test --ci --runInBand --coverage
