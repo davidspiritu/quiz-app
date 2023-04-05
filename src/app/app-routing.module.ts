@@ -8,6 +8,10 @@ const routes: Routes = [
       import('./+start/start.module').then((m) => m.StartModule),
   },
   {
+    path: 'quiz',
+    loadChildren: () => import('./+quiz/quiz.module').then((m) => m.QuizModule),
+  },
+  {
     path: '**',
     redirectTo: 'start',
     pathMatch: 'full',
