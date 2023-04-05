@@ -1,0 +1,27 @@
+<div
+  *transloco="let t"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  class="main"
+>
+  <div class="card text-center">
+    <div class="card-header">{{ t('start.labels.quizGame') }}</div>
+    <div class="card-body">
+      <p class="card-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto soluta
+        optio commodi dolores dolor. Facere autem, officiis veniam quidem
+        aperiam corrupti error iusto nisi molestias fuga perspiciatis, nostrum
+        earum. Eaque!
+      </p>
+      <button
+        data-testid="start-button"
+        mat-raised-button
+        type="button"
+        color="primary"
+        (click)="startQuiz()"
+      >
+        {{ t('start.labels.startQuiz') }}
+      </button>
+    </div>
+  </div>
+</div>
