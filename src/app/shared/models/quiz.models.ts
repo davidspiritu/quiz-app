@@ -14,3 +14,8 @@ export type Quizes = Entity &
     trivias: Quiz[];
     evaluation?: Evaluation;
   }>;
+
+export type QuizItem = Readonly<{
+  id: string;
+  answer: string | null;
+}>;
