@@ -1,0 +1,52 @@
+<ng-container *transloco="let t">
+  <mat-toolbar color="basic" data-testid="header-toolbar">
+    <div
+      fxFlex
+      fxLayout="row"
+      fxLayoutAlign="center center"
+      fxLayoutGap="1rem"
+      fxLayout.gt-xs="row"
+      fxLayoutAlign.gt-xs="space-between center"
+    >
+      <div
+        fxFlex
+        fxLayout="row"
+        fxLayoutAlign="start center"
+        fxLayoutGap="1rem"
+      >
+        <span>{{ t('header.labels.title') }}</span>
+        <mat-icon>{{ t('header.icons.title') }}</mat-icon>
+      </div>
+
+      <ng-template [ngTemplateOutlet]="langSelectTempalate"></ng-template>
+    </div>
+  </mat-toolbar>
+
+  <ng-template #langSelectTempalate>
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="1rem">
+      <button
+        data-testid="header-button"
+        color="warning"
+        mat-button
+        [matMenuTriggerFor]="menu"
+        [matTooltip]="t('header.texts.changeLanguage')"
+      >
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap=".6rem">
+          <mat-icon>{{ t('header.icons.languageSelectIcon') }}</mat-icon>
+          <span>{{ selectedLanguage | uppercase }}</span>
+        </div>
+      </button>
+    </div>
+
+    <mat-menu #menu="matMenu" xPosition="before">
+      <button
+        mat-menu-item
+        *ngFor="let lang of languages"
+        (click)="changeLanguage.emit(lang.value)"
+        [attr.data-testid]="'header-button-' + lang.value"
+      >
+        {{ lang.label }}
+      </button>
+    </mat-menu>
+  </ng-template>
+</ng-container>
