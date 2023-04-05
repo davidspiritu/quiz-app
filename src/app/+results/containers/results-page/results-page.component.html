@@ -2,7 +2,15 @@
   <quiz-rating-course-table
     [evaluation]="evaluation"
   ></quiz-rating-course-table>
-  <div class="controls" fxLayout="row" fxLayoutAlign="space-evenly center">
+  <div
+    class="controls"
+    fxLayout="column"
+    fxLayoutGap="1rem"
+    fxLayoutAlign="space-evenly center"
+    fxLayout.gt-xs="row"
+    fxLayoutAlign.gt-xs="center center"
+    fxLayoutGap.gt-xs="1rem"
+  >
     <button
       data-testid="start-button"
       type="button"
