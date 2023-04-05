@@ -1,3 +1,5 @@
+/* eslint-disable  @typescript-eslint/no-non-null-assertion */
+
 import { Injectable } from '@angular/core';
 
 import { Course, Rating } from '../constants';
