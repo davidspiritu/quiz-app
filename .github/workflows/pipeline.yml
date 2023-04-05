@@ -19,6 +19,6 @@ jobs:
       - name: Install node packages
         run: npm ci --legacy-peer-deps
       - name: Lint
-        run: nx lint
+        run: npx nx run quiz-app:lint
       - name: Test
-        run: nx test
+        run: npx nx test
