@@ -1,0 +1,80 @@
+<section class="parent" *transloco="let t">
+  <div class="crd">
+    <div class="card" style="width: 18rem">
+      <div
+        fxFLex
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        *ngIf="!(loaded$ | async); else main"
+      >
+        <div class="spinner-grow" role="status" data-testid="spinner">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+
+      <ng-template #main>
+        <div class="card-header" data-testid="main">
+          <h3>{{ t('quiz.labels.question') }}</h3>
+          <span>
+            {{t('quiz.labels.questionInfo', {selectedIndex, length:
+              questions.length})}}
+          </span>
+        </div>
+
+        <div
+          class="card-body"
+          fxLayout="column"
+          fxLayoutAlign="space-evenly none"
+        >
+          <div class="" [ngSwitch]="selectedIndex">
+            <ng-container
+              *ngFor="let question of questions$ | async; let i = index"
+            >
+              <ng-container *ngSwitchCase="i + 1">
+                <quiz-choices-form
+                  data-testid="choice-form"
+                  [choices]="question.choices"
+                  [question]="question.question"
+                  [formControl]="getFormControlArray(i)"
+                ></quiz-choices-form>
+              </ng-container>
+            </ng-container>
+          </div>
+          <div
+            fxLayout="column"
+            fxLayoutGap="1rem"
+            fxLayoutAlign="center center"
+            fxLayoutAlign.gt-xs="center start"
+            fxLayout.gt-xs="row"
+            fxLayoutAlign.gt-xs="space-between center"
+          >
+            <button
+              data-testid="back-button"
+              type="button"
+              class="btn btn-secondary"
+              mdbRipple
+              (click)="back()"
+              [disabled]="selectedIndex === 1"
+            >
+              {{ t('quiz.labels.back') }}
+            </button>
+            <button
+              data-testid="next-submit-button"
+              type="button"
+              class="btn btn-secondary"
+              mdbRipple
+              (click)="selectedIndex !== questions.length ? next() : onSubmit()"
+              [disabled]="nextDisabled()"
+            >
+              {{
+                selectedIndex !== questions.length
+                  ? t('quiz.labels.next')
+                  : t('quiz.labels.submit')
+              }}
+            </button>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</section>

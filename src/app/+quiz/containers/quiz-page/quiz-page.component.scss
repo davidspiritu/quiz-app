@@ -1,0 +1,32 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  quiz-choices-form {
+    min-height: 15rem;
+  }
+
+  button {
+    min-width: 98px;
+  }
+}
+
+.card {
+  height: 30vh;
+  min-height: 30vh;
+}
+
+.parent {
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: clamp(23ch, 50%, 45ch);
+  min-height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}

@@ -1,0 +1,23 @@
+<form
+  [formGroup]="quizItemForm"
+  fxLayout="column"
+  fxLayoutAlign="start start"
+  fxLayoutGap="1rem"
+>
+  <span data-testid="question">{{ question }}</span>
+  <mat-radio-group
+    *ngIf="choices"
+    formControlName="answer"
+    fxLayout="column"
+    fxLayoutAlign="start start"
+    fxLayoutGap=".5rem"
+  >
+    <mat-radio-button
+      data-testid="radio"
+      *ngFor="let choice of choices"
+      [value]="choice"
+    >
+      {{ choice }}
+    </mat-radio-button>
+  </mat-radio-group>
+</form>

@@ -1,0 +1,14 @@
+:host {
+  display: block;
+
+  ::ng-deep {
+    span {
+      text-align: justify;
+      text-justify: inter-word;
+      white-space: normal;
+    }
+    mat-radio-group {
+      white-space: normal;
+    }
+  }
+}
