@@ -1,1 +1,11 @@
-🐸
+<header>
+  <quiz-header-toolbar
+    data-testid="header"
+    [selectedLanguage]="selectedLanguage"
+    (changeLanguage)="changeLanguage($event)"
+  ></quiz-header-toolbar>
+
+  <div class="router-outlet">
+    <router-outlet data-testid="outlet"></router-outlet>
+  </div>
+</header>

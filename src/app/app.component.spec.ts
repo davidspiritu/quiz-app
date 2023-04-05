@@ -1,14 +1,20 @@
 import { RouterTestingModule } from '@angular/router/testing';
-import { createRoutingFactory, SpectatorRouting } from '@ngneat/spectator/jest';
+import {
+  byTestId,
+  createRoutingFactory,
+  SpectatorRouting,
+} from '@ngneat/spectator/jest';
 
 import { AppComponent } from './app.component';
+import { HeaderModule } from './header';
+import { SharedModule } from './shared';
 
 describe('App Component', () => {
   let spectator: SpectatorRouting<AppComponent>;
 
   const createComponent = createRoutingFactory({
     component: AppComponent,
-    imports: [RouterTestingModule],
+    imports: [RouterTestingModule, HeaderModule, SharedModule],
     stubsEnabled: false,
     routes: [],
   });
@@ -19,5 +25,7 @@ describe('App Component', () => {
 
   it('should create the app', () => {
     expect(spectator.component).toBeTruthy();
+    expect(spectator.query(byTestId('header'))).toBeVisible();
+    expect(spectator.query(byTestId('outlet'))).toBeVisible();
   });
 });

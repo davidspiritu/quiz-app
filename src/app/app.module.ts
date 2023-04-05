@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TranslocoRootModule } from './core';
+import { HeaderModule } from './header';
+import { SharedModule } from './shared';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +17,8 @@ import { TranslocoRootModule } from './core';
     HttpClientModule,
     TranslocoRootModule,
     AppRoutingModule,
+    SharedModule,
+    HeaderModule,
   ],
   bootstrap: [AppComponent],
 })
