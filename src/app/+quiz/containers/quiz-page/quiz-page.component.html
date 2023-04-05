@@ -5,7 +5,7 @@
         fxFLex
         fxLayout="column"
         fxLayoutAlign="center center"
-        *ngIf="!(loaded$ | async); else main"
+        *ngIf="(loaded$ | async) !== true; else main"
       >
         <div class="spinner-grow" role="status" data-testid="spinner">
           <span class="visually-hidden">Loading...</span>

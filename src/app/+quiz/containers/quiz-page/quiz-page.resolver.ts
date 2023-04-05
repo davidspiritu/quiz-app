@@ -6,6 +6,7 @@ import { QuizRepository } from '@quiz/app/shared';
 export class QuizPageResolver implements Resolve<void> {
   constructor(private quizRepository: QuizRepository) {}
 
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   resolve(route: ActivatedRouteSnapshot): void {
     this.quizRepository.loadQuestions();
     return;

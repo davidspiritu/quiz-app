@@ -11,7 +11,7 @@ import { ChoicesFormComponent } from './choices-form.component';
 import { ChoicesFormModule } from './choices-form.module';
 
 @Component({
-  selector: 'ecm-mock-host',
+  selector: 'quiz-mock-host',
   template: `<ng-content></ng-content> `,
 })
 class MockHostComponent {
